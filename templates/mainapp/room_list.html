@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Room list{% endblock %}
+
+{% block content %}
+    <h1>Rooms</h1>
+    <ul class="rooms">
+        {% for room in room_list %}
+        <li class="room">
+            <ul class="list-group">
+                <li class="list-group-item">Number: {{ room.number }}</li>
+                <li class="list-group-item">Room type: {{ room.room_type }}</li>
+                <li class="list-group-item">Enabled: {% if room.enabled == 1 %} yes {% else %} no {% endif %}</li>
+                <li class="list-group-item">Count beds: {{ room.count_bed }}</li>
+                <li class="list-group-item">Floor: {{ room.floor }}</li>
+                <li class="list-group-item">Bar: {% if room.bar == 1 %} yes {% else %} no {% endif %}</li>
+                <li class="list-group-item">Price: {{ room.price }}</li>
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

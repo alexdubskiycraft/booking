@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Book list{% endblock %}
+
+{% block content %}
+    <h1>Bookings</h1>
+    <ul class="bookings">
+        {% for book in booking_list %}
+        <li class="book">
+            <ul class="list-group">
+                <li class="list-group-item">User: {{ book.user }}</li>
+                <li class="list-group-item">Room: {{ book.room }}</li>
+                <li class="list-group-item">Begin: {{ book.begin_date }}</li>
+                <li class="list-group-item">End: {{ book.end_date }}</li>
+                
+                
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+   

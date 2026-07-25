@@ -42,16 +42,18 @@ def room_list(request):
     }
     return render(request, "mainapp/room_list.html", context)  
 
+@login_required
 def user_list(request):
     users = User.objects.all()
     context = {
         "user_list": users,
     }
-    return render(request, "user_list.html", context)
+    return render(request, "mainapp/user_list.html", context)
 
+@login_required
 def booking_list(request):
     book = Booking.objects.all()
     context = {
         "booking_list": book,
     }
-    return render(request, "booking_list.html", context)
+    return render(request, "mainapp/booking_list.html", context)

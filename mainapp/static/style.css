@@ -39,3 +39,169 @@ li.room::before {
     font-size: 18px;
     color: #3498db;
 }
+
+/* user list */
+
+ul.users {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+ul.users li.user {
+    background: #ffffff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    overflow: hidden;
+}
+
+ul.users li.user:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    border-color: #3498db;
+}
+
+ul.users li.user::before {
+    content: "👤 Користувач";
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #3498db;
+    padding: 12px 15px 0 15px;
+}
+
+ul.users ul.list-group {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.users ul.list-group li.list-group-item {
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 15px;
+    color: #333;
+}
+
+ul.users ul.list-group li.list-group-item:last-child {
+    border-bottom: none;
+}
+
+ul.users ul.list-group li.list-group-item span.label {
+    font-weight: bold;
+    color: #3498db;
+}
+
+/* booking list */
+
+ul.bookings {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+ul.bookings li.book {
+    background: #ffffff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    overflow: hidden;
+}
+
+ul.bookings li.book:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    border-color: #27ae60;
+}
+
+ul.bookings li.book::before {
+    content: "📅 Бронювання";
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #27ae60;
+    padding: 12px 15px 0 15px;
+}
+
+ul.bookings ul.list-group {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.bookings ul.list-group li.list-group-item {
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 15px;
+    color: #333;
+}
+
+ul.bookings ul.list-group li.list-group-item:last-child {
+    border-bottom: none;
+}
+
+ul.bookings ul.list-group li.list-group-item span.label {
+    font-weight: bold;
+    color: #27ae60;
+}
+
+/* logout form */
+
+nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 20px;
+    background: #f8f8f8;
+}
+
+nav .logout-form {
+    margin-left: auto; 
+}
+
+nav button.logout-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #3498db;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* index links */
+
+.nav-links {
+    text-align: center; 
+    margin: 20px 0;
+}
+
+.nav-links .btn-link {
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 8px 16px;
+    background: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.nav-links .btn-link:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+}
+
+.nav-links .btn-link:active {
+    background: #1f6391;
+    transform: translateY(0);
+}

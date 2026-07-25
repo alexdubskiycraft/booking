@@ -3,7 +3,10 @@
 {% block title %}Welcome to room booking{% endblock %}
 
 {% block content %}
-<a href="{% url 'room_list' %}">Rooms</a>
-<a href="{% url 'user_list' %}">Users</a>
-<a href="{% url 'booking_list' %}">Bookings</a>
+<div class="nav-links">
+    <a href="{% url 'room_list' %}" class="btn-link">Rooms</a>
+    <a href="{% url 'user_list' %}" class="btn-link">Users</a>
+    <a href="{% url 'booking_list' %}" class="btn-link">Bookings</a>
+</div>
+
 {% endblock %}

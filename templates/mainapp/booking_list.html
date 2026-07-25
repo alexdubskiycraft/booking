@@ -2,6 +2,8 @@
 
 {% block title %}Book list{% endblock %}
 
+{% block back %}| <a href="{% url 'index' %}">Home</a> {% endblock %}
+
 {% block content %}
     <h1>Bookings</h1>
     <ul class="bookings">

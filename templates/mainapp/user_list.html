@@ -2,13 +2,14 @@
 
 {% block title %}User list{% endblock %}
 
+{% block back %}| <a href="{% url 'index' %}">Home</a> {% endblock %}
+
 {% block content %}
     <h1>Users</h1>
-    <ul class="rooms">
+    <ul class="users">
         {% for user in user_list %}
         <li class="user">
             <ul class="list-group">
-                <li class="list-group-item">ID: {{ user.ID }}</li>
                 <li class="list-group-item">Firstname: {{ user.firstname }}</li>
                 <li class="list-group-item">Lastname: {{ user.lastname }}</li>
                 <li class="list-group-item">Middlename: {{ user.middlename }}</li>   
@@ -16,7 +17,6 @@
                 <li class="list-group-item">Email: {{ user.email }}</li>
                 <li class="list-group-item">Phone: {{ user.phone }}</li>
                 <li class="list-group-item">Role: {{ user.role }}</li>
-                
             </ul>
         </li>
         {% endfor %}

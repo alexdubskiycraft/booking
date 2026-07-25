@@ -10,10 +10,11 @@
 <body>
     <nav>
         {% if user.is_authenticated %}
-            Hello, {{ user.username }} |
-            <form method="post" action="{% url 'logout' %}" style="display:inline;">
+            Hello, {{ user.username }}
+            {% block back %}{% endblock %}
+            <form method="post" action="{% url 'logout' %}" class="logout-form">
                 {% csrf_token %}
-                <button type="submit" style="background:none; border:none; padding:0; color:blue; text-decoration:underline; cursor:pointer;">
+                <button class="logout-btn" type="submit">
                     Logout
                 </button>
             </form>
